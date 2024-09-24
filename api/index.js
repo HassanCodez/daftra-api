@@ -3,7 +3,7 @@ const fs = require("fs");
 const cors = require("cors");
 
 const PORT = process.env.PORT || 8081;
-const errorChance = 0.1;
+// const errorChance = 0.1;
 
 const app = express();
 app.use(cors());
