@@ -8,10 +8,10 @@ const errorChance = 0.1;
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use((req, res, next) => {
-  if (Math.random() <= errorChance) return res.status(500).send(undefined);
-  else next();
-});
+// app.use((req, res, next) => {
+//   if (Math.random() <= errorChance) return res.status(500).send(undefined);
+//   else next();
+// });
 
 app.post("/track", (req, res) => {
   const { id, from, to } = req.body;
